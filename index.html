@@ -25,18 +25,49 @@
   <area shape="circle" coords="x1,y1,r" href=下载.jpeg> 
   <script>
     window.$docsify = {
-      name: 'HERO-WPC', //网站名称
+      name: '侧边栏', //网站名称
       
+      mergeNavbar: true, // 小屏设备下合并导航栏到侧边栏
+
       maxLevel: 2, // 默认情况下会抓取文档中所有标题渲染成目录，可配置最大支持渲染的标题层级
       
       repo: 'https://github.com/HERO-WPC/hero-wpc.github.io', //右上角github主页
       
       loadNavbar: true, // _navbar.md导航栏
       
+      nativeEmoji: true, // 开启原生表情符号
+      
       loadSidebar: true, // _sidebar.md侧边栏
+
+      search: {
+        paths: 'auto',
+        placeholder: '搜索',
+        noData: '找不到结果',
+        depth: 3,
+      },
+
+            count:{
+        countable:true,
+        fontsize:'0.9em',
+        color:'rgb(90,90,90)',
+        language:'chinese'
+      }
+
+
+
+
+
     }
   </script>
   <!-- Docsify v4 -->
+  <!--图片放大-->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script> 
+  <!--搜索框-->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <!--字数统计-->
+  <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
+  <!--代码高亮-->
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.22.0/components/prism-java.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
 </body>
 </html>
